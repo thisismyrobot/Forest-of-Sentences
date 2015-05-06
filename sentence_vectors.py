@@ -13,6 +13,7 @@ def create_goal_posts(source_data, n_goal_posts=10):
     examples = [random.choice(source_data).split(' ')
                 for _goal in xrange(n_goal_posts)]
     map(random.shuffle, examples)
+    examples = map(' '.join, examples)
     return examples
 
 

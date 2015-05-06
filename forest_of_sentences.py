@@ -17,7 +17,7 @@ print 'Done!'
 
 print 'Preparing vectoriser...',
 sentence_vectoriser = sentence_vectors.SentenceVectoriser(
-    map(operator.itemgetter(1), data), 50
+    map(operator.itemgetter(1), data), 100
 )
 print 'Done!'
 
@@ -42,7 +42,7 @@ def predict(sentence):
     """
     score = model.predict(sentence_vectoriser.vector(sentence))[0]
     cat = round(score, 0)
-    return ('English', 'French', 'Spanish')[int(cat)], int((1 - abs(score - cat)) * 100)
+    return ('English', 'French', 'Spanish')[int(cat)], int((0.5 - abs(score - cat)) * 200)
 
 
 print 'Testing...\n'
