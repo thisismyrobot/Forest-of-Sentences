@@ -28,7 +28,7 @@ working heavily with the Regressor recently so I'm sticking with that :)
     scikit-learn (and all its dependencies etc)
 
 I strongly recommend also installing python-Levenshtein for a 10x speedup in
-training.
+training data preparation.
 
 ## Example run
 
